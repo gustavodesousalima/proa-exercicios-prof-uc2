@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exércicio 3</title>
+</head>
+<body>
+    <h1>A CEF concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldo médio no último ano. Fazer um programa em JAVA que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. Imprimir uma mensagem informando o saldo médio e o valor de crédito.</h1>
+</body>
+
+<script>
+    let saldoMes1 = parseFloat(prompt("Dígite o valor do seu saldo no mês 1"))
+    let saldoMes2 = parseFloat(prompt("Dígite o valor do seu saldo no mês 2"))
+    let saldoMes3 = parseFloat(prompt("Dígite o valor do seu saldo no mês 3"))
+    let saldoMes4 = parseFloat(prompt("Dígite o valor do seu saldo no mês 4"))
+    let saldoMes5 = parseFloat(prompt("Dígite o valor do seu saldo no mês 5"))
+    let saldoMes6 = parseFloat(prompt("Dígite o valor do seu saldo no mês 6"))
+    let saldoMes7 = parseFloat(prompt("Dígite o valor do seu saldo no mês 7"))
+    let saldoMes8 = parseFloat(prompt("Dígite o valor do seu saldo no mês 8"))
+    let saldoMes9 = parseFloat(prompt("Dígite o valor do seu saldo no mês 9"))
+    let saldoMes10 = parseFloat(prompt("Dígite o valor do seu saldo no mês 10"))
+    let saldoMes11 = parseFloat(prompt("Dígite o valor do seu saldo no mês 11"))
+    let saldoMes12 = parseFloat(prompt("Dígite o valor do seu saldo no mês 12"))
+
+    let saldoMedio = (saldoMes1 + saldoMes2 + saldoMes3 + saldoMes4 + saldoMes5 + saldoMes6 + saldoMes7 + saldoMes8 + saldoMes9 + saldoMes10 + saldoMes11 + saldoMes12) / 12
+
+    if(saldoMedio >= 0 && saldoMedio <= 500){
+        window.alert("Infelizmente são será possível fornecer crédito")
+    }else if(saldoMedio >= 501 && saldoMedio <=1000){
+        window.alert("Parábens! Você tem 30% de crédito do seu saldo médio")
+    }else if(saldoMedio >=1001 && saldoMedio <= 3000){
+        window.alert("Parábens! Você tem 40% de crédito do seu saldo médio")
+    }else{
+        window.alert("Parábens! Você tem 50% de crédito do seu saldo médio")
+    }
+</script>
+</html>

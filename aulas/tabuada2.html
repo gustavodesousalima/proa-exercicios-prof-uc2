@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada 2</title>
+
+    <style>
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 10vh;
+            background-color: #0000ff75;
+        }
+
+        h1{
+            color: #fff;
+        }
+
+        p{
+            padding: 0;
+            color: #000;
+        }
+
+        #tabuada{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            height: 90vh;
+            flex-direction: row;
+        }
+
+        div{
+            background-color: aquamarine;
+            width: 100%;
+            height: 15vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada do </h1>
+    </header>
+
+    <main id="tabuada">
+
+    </main>
+</body>
+
+<script>
+    let numero = parseFloat(prompt("Dígite um número da tabuaba"))
+
+    let i = 1
+
+    let resultado
+    let resultadoFinal = "";
+
+    while(i <= 10){
+        resultado = i * numero
+        resultadoFinal += "<div>" + "<p>" + resultado + "<p/> <div/>"
+        i++
+    }
+
+    document.getElementsByTagName("h1")[0].innerHTML += numero
+    document.getElementById("tabuada").innerHTML = resultadoFinal
+</script>
+</html>

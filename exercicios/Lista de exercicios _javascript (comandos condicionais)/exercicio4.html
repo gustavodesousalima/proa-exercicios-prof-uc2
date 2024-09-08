@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Dados três valores A, B e C, construa um programa em Javascript, que mostre na tela os valores de forma descendente (do maior para o menor).</h1>
+</body>
+
+<script>
+    let valorA = prompt("Dígite valor A")
+    let valorB = prompt("Dígite valor B")
+    let valorC = prompt("Dígite valor C")
+
+    let ordemValores = ""
+
+   if(valorA < valorC && valorB < valorC){
+        if(valorA < valorB){
+            ordemValores += valorC + " , " + valorB + " , " + valorA
+        }else{
+            ordemValores += valorC + " , " + valorA + " , " + valorB
+        }
+   }
+
+   if(valorB < valorA && valorC < valorA){
+        if(valorB < valorC){
+            ordemValores += valorA + " , " + valorC + " , " + valorB
+        }else{
+            ordemValores += valorA + " , " + valorB + " , " + valorC
+        }
+   }
+
+   if(valorA < valorB && valorC < valorB){
+        if(valorA < valorC){
+            ordemValores += valorB + " , " + valorC + " , " + valorA
+        }else{
+            ordemValores += valorB + " , " + valorA + " , " + valorC
+        }
+   }
+
+   if(valorA == valorB && valorA == valorC){
+        window.alert("Os números são iguais")
+   }else{
+       window.alert(ordemValores)
+   }
+
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Combo Lanche</title>
+</head>
+<body>
+    <h1>Pedido</h1>
+
+    <div>
+
+    </div>
+    <script>
+        let numeroDoPedido = parseInt(prompt("Dígite o número do seu combo"))
+
+        switch (numeroDoPedido){
+            case 1:
+                document.getElementsByTagName("h1")[0].innerHTML += " 1"
+                document.getElementsByTagName("div")[0].innerHTML = "<div><h2>Hambúrguer de Nutella com Queijo Azul<h2/><br><h3>Ingredientes:</h3><br><p>Pão de hambúrguer</p><br><p>Hambúrguer de carne bovina</p><br><p>Uma generosa camada de Nutella</p><br></div>"
+                break
+            case 2:
+                document.getElementsByTagName("h1")[0].innerHTML += " 2"
+            document.getElementsByTagName("div")[0].innerHTML = "<div><h2>Pizza de Melancia com Presunto Cru<h2/><br><h3>Ingredientes:</h3><br><p>Fatias de melancia</p><br><p>Presunto cru fatiado finamente</p><br><p>Queijo ricota esfarelado</p><br></div>"
+                break
+            case 3:
+                document.getElementsByTagName("h1")[0].innerHTML += " 3"
+                document.getElementsByTagName("div")[0].innerHTML = "<div><h2>Pipoca com Sorvete de Bacon<h2/><br><h3>Ingredientes:</h3><br><p>Pipoca estourada com manteiga</p><br><p>Sorvete de bacon (ou de sua preferência)</p><br><p>Um toque de caramelo salgado para finalizar</p><br></div>"
+                break
+            case 4:
+                document.getElementsByTagName("h1")[0].innerHTML += " 4"
+            document.getElementsByTagName("div")[0].innerHTML = "<div><h2>Tacos de Chocolate com Picles<h2/><br><h3>Ingredientes:</h3><br><p>Tortilhas de taco de chocolate</p><br><p>Picles cortados em tiras finas</p><br><p>Queijo cheddar ralado</p><br></div>"
+                break
+            default:
+                document.getElementsByTagName("div")[0].innerHTML = "<h2>esse combo não existe</h2>"
+        }
+    </script>
+</body>
+</html>

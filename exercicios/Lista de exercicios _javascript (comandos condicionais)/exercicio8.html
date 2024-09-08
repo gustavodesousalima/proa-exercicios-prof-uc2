@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h1>
+        8- Escrever um programa que leia:
+        - a porcentagem do IPI a ser acrescido no valor das peças 
+        - o código da peça 1, valor unitário da peça 1, quantidade de peças 1 
+        - o código da peça 2, valor unitário da peça 2, quantidade de peças 2 
+        O programa deve calcular o valor total a ser pago e apresentar o resultado. 
+        Cálculo : (valor1*quant1 + valor2*quant2)*(IPI/100 + 1)
+    </h1>
+</body>
+    <script>
+        let porcentagemIPI = parseFloat(prompt("Dígite a porcentagem do IPI"))
+
+        let codigopeca1 = parseInt(prompt("Código peça 1"))
+        let valorUnitarioPeca1 = parseInt(prompt("Valor Unitário da peça 1"))
+        let quantidadePecas1 = parseInt(prompt("Quantidade peças 1"))
+        
+        let codigopeca2 = parseInt(prompt("Código peça 2"))
+        let valorUnitarioPeca2 = parseFloat(prompt("Valor Unitário da peça 2"))
+        let quantidadePecas2 = parseInt(prompt("Quantidade peças 2"))
+
+        valorASerPago = (valorUnitarioPeca1 * quantidadePecas1 + valorUnitarioPeca2 * quantidadePecas2) * (porcentagemIPI/100 + 1)
+
+        window.alert("Valor a ser pago é: " + valorASerPago)
+    </script>
+</html>

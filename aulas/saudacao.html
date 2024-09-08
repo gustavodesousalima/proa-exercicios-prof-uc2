@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação</title>
+</head>
+<body>
+    <h1>Saudação</h1>
+    <script>
+        let horario = parseFloat(prompt("Que horas são?"))
+
+        if(horario >= 0 && horario <= 5){
+            alert("Boa madrugada!!!")
+        }else if(horario >= 6 && horario < 12){
+            alert("Bom dia!!!")
+        }else if(horario >=12 && horario < 18){
+            alert("Boa tarde!!")
+        }else if(horario >= 18 && horario < 24 ){
+            alert("Boa noite!!!")
+        }else{
+            alert("Horário inválido")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exércicio 2</title>
+</head>
+<body>
+    <h1>2- Escreva um programa em Javascript, que leia um número e informe se ele é divisível por 10, por 5 ou por 2 ou se não é divisível por nenhum deles.</h1>
+</body>
+<script>
+    let numero = parseFloat(prompt("Dígite um número"))
+
+    if(numero % 2 == 0){
+        window.alert("O número " + numero + " é divisivel por 2")
+    }else if(numero % 5 == 0){
+        window.alert("O número " + numero + " é divisivel por 5")
+    }else if(numero % 10 == 0){
+        window.alert("O número " + numero + " é divisivel por 10")
+    }else{
+        window.alert("O número não é divisivel por 2, 5 e 10")
+    }
+</script>
+</html>

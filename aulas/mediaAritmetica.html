@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <h1>Média Aritmética</h1>
+</body>
+
+<script>
+    let nota1 = parseFloat(prompt("Dígite número 1"))
+    let nota2 = parseFloat(prompt("Dígite número 2"))
+    let nota3 = parseFloat(prompt("Dígite número 3"))
+    let nota4 = parseFloat(prompt("Dígite número 4"))
+
+    let media = (nota1 + nota2 + nota3 + nota4) / 4
+    
+    document.write(media.toFixed(2) + "<br/>")
+    
+    if(media >= 6){
+        document.write("Aprovado")
+    }else if(media >= 5){
+        document.write("Recuperação")
+    }else{
+        document.write("Reprovado")
+    }
+    
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <div id="resultados">
+
+    </div>
+</body>
+<script>
+    let numero = parseInt(prompt("Entre com a tabuada"))
+    
+    let i = 1
+    let resultado
+    let resultados = ""
+
+    while(i <= 10){
+        resultado = i * numero
+        resultados += resultado + "<br>"
+        i++
+    }
+
+    document.getElementById("resultados").innerHTML = resultados
+</script>
+</html>
