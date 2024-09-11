@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando body e conteúdo</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        main{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            height: 20vh;
+            gap: 10%;
+        }
+
+        header p{
+            text-align: center;
+        }
+
+        section{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+        }
+
+        .container-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20vh;
+            gap: 5%;
+        }
+        
+        button{
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .container-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+            gap: 5%;
+        }
+
+        .container-img img{
+            width: 40%;
+            height: 50vh;
+        }
+
+        .light-mode{
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+
+        .daltonic-mode{
+            background-color: rgb(237, 16, 178);
+            color: rgb(90, 235, 54);
+        }
+
+        .acessibility-mode{
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body id="container-principal" class="light-mode">
+    <main>
+        <header>
+            <h1 id="title">Testando o modo claro</h1>
+            <p>
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni impedit molestiae, possimus velit ad dignissimos voluptate incidunt excepturi voluptatem accusantium ipsam! Rem veritatis rerum hic. Esse sit eos, ullam sint odit soluta temporibus delectus, voluptatibus pariatur, ab porro iste. Vero exercitationem voluptate neque qui, expedita itaque voluptatem natus blanditiis, debitis nobis, ipsam porro veritatis cum amet? Nihil sit accusantium ipsam soluta delectus quod eius! Aspernatur velit cumque vel rem, id eum autem voluptates aut nihil explicabo nulla libero molestias?
+            </p>
+        </header>
+
+        <section>
+            <div class="container-button">
+                <button onclick="darkmode()">Modo Escuro</button>
+                <button onclick="daltonicmode()">modo Daltônico</button>
+                <button onclick="lightmode()">Modo Branco</button>
+                <button onclick="acessibilitymode()">A+</button>
+            </div>
+            <div class="container-img">
+                <img id="img" src="../image/gamers3.jpeg" alt="">
+                <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nostrum recusandae dicta unde omnis accusamus dolores dolore alias dignissimos, cupiditate, provident rerum in ratione itaque veniam, mollitia nulla similique. Temporibus ullam tempore esse quia molestiae perferendis iusto modi dolores. Accusamus, in aspernatur. Dicta qui quam quod ab facilis explicabo voluptatum recusandae soluta saepe deleniti nesciunt culpa, quos, ut adipisci asperiores et nemo dolorum cum dolores quaerat corporis. Tempora fuga molestiae soluta. Quidem illo eligendi ab perspiciatis ratione dolorum veritatis aperiam.</p>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    let main = document.getElementById("container-principal")
+    let img = document.getElementById("img")
+    let title = document.getElementById("title")
+
+    function darkmode (){
+
+        if (main.classList != "dark-mode") {
+            main.classList.add("dark-mode")
+            main.classList.remove("acessibility-mode")
+            main.classList.remove("daltonic-mode")
+            main.classList.remove("light-mode")
+            title.innerText="Testando o modo escuro"
+            img.src="../image/gamers4.jpeg"
+        }
+    }
+
+    function daltonicmode (){
+
+        if (main.classList != "daltonic-mode") {
+            main.classList.add("daltonic-mode")
+            main.classList.remove("acessibility-mode")
+            main.classList.remove("dark-mode")
+            main.classList.remove("light-mode")
+            title.innerText="Testando o modo daltônico"
+            img.src="../image/matrice.jpg"
+        }
+    }
+
+    function lightmode (){
+
+        if (main.classList != "light-mode") {
+            main.classList.add("light-mode")
+            main.classList.remove("acessibility-mode")
+            main.classList.remove("daltonic-mode")
+            main.classList.remove("dark-mode")
+            title.innerText="Testando o modo claro"
+            img.src="../image/gamers3.jpeg"
+        }
+    }
+
+    function acessibilitymode(){
+
+        if(main.classList != "acessibility-mode"){
+            main.classList.add("acessibility-mode")
+            title.innerText="Testando modo baixa visão"
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando Body</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        main{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+        }
+
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
+            height: 20vh;
+            gap: 20%;
+        }
+
+        header p{
+            text-align: center;
+        }
+
+        section{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 90%;
+        }
+
+        .container-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20vh;
+            gap: 5%;
+        }
+        
+        button{
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .container-img{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            height: 90%;
+        }
+
+
+        .container-img img{
+            height: 50vh;
+        }
+
+        .light-mode{
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+
+        .blue-mode{
+            background-color: rgb(39, 70, 225);
+            color: rgb(90, 235, 54);
+        }
+    </style>
+</head>
+<body id="container-principal" class="light-mode">
+    <main>
+        <header>
+            <h1>Testando troca de conteúdo</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ipsum odio natus ad totam. Quaerat impedit tempora dolor doloribus ad sapiente nisi officiis. In inventore obcaecati corrupti doloribus quo cumque natus consectetur soluta nisi neque nulla, dignissimos molestias, repellendus et.
+            </p>
+        </header>
+
+        <section>
+            <div class="container-button">
+                <button id="button-dark-mode" onclick="darkmode()">Preto</button>
+                <button id="button-light-mode" onclick="bluemode()">Azul</button>
+                <button id="button-light-mode" onclick="lightmode()">Branco</button>
+            </div>
+            <div class="container-img">
+                <img id="img" src="../image/gamers1.jpeg" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+
+    function darkmode (){
+        let main = document.getElementById("container-principal")
+        let img = document.getElementById("img")
+
+
+        if (main.classList != "dark-mode") {
+            main.classList.add("dark-mode")
+            main.classList.remove("blue-mode")
+            main.classList.remove("light-mode")
+            img.src="../image/gamers6.jpeg"
+        }
+    }
+
+    function bluemode (){
+        let main = document.getElementById("container-principal")
+        let img = document.getElementById("img")
+
+
+        if (main.classList != "blue-mode") {
+            main.classList.add("blue-mode")
+            main.classList.remove("dark-mode")
+            main.classList.remove("light-mode")
+            img.src="../image/profile.jpeg"
+        }
+    }
+
+    function lightmode (){
+        let main = document.getElementById("container-principal")
+        let img = document.getElementById("img")
+
+        if (main.classList != "light-mode") {
+            main.classList.add("light-mode")
+            main.classList.remove("blue-mode")
+            main.classList.remove("dark-mode")
+            img.src="../image/gamers1.jpeg"
+        }
+    }
+</script>
+</html>
