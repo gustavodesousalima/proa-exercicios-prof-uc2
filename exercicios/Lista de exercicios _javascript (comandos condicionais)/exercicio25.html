@@ -13,40 +13,17 @@
 
 <script>
 
-    let soma = 0
+let soma = 0;
 
-    let numero1 = parseFloat(prompt("Dígite um número"))
+while (true) {
+    let numero = parseFloat(prompt("Digite um número:"));
 
-    if(numero1 < 0){
-        window.alert("Você digitou um número negativo")
-    }else{
-        soma += numero1
+    if (numero < 0) {
+        window.alert("Você digitou um número negativo. Encerrando a execução.");
+        break;
+    } else {
+        soma += numero;
     }
-
-    let numero2 = parseFloat(prompt("Dígite um número"))
-
-    if(numero2 < 0){
-        window.alert("Você digitou um número negativo")
-    }else{
-        soma += numero2
-    }
-
-    let numero3 = parseFloat(prompt("Dígite um número"))
-
-    if(numero3 < 0){
-        window.alert("Você digitou um número negativo")
-    }else{
-        soma += numero3
-    }
-
-    let numero4 = parseFloat(prompt("Dígite um número"))
-
-    if(numero4 < 0){
-        window.alert("Você digitou um número negativo")
-    }else{
-        soma += numero4
-    }
-
-    document.write("Soma igual á:" + soma)
+}
 </script>
 </html>
