@@ -14,15 +14,15 @@
 <script>
 
 let soma = 0
+let i = 0
 
-while (true) {
-    let numero = parseFloat(prompt("Digite um número:"))
-
-    if (numero < 0) {
-        window.alert("Você digitou um número negativo.")
+while(i < 5){
+    let numero = parseInt(prompt("digite"))
+    i++
+    if (numero < 0){
         break
-    } else {
-        soma += numero
+    }else{
+        soma+=numero
     }
 }
 </script>
