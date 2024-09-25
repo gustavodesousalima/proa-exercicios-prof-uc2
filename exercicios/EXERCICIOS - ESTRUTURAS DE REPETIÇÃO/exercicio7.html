@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h1>(7) Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "while".</h1>
+</body>
+
+<script>
+    let entrada = parseInt(prompt("Diigte um número"))
+    let i = 2
+    let primo = true
+
+
+    // O while só vai até i < entrada pois se colocar <= no if ele vai sempre retornar primo como true
+    if(entrada > 1){
+        while(i < entrada){
+            
+            if (entrada % i == 0) {
+                primo = false
+                break                
+            }
+
+            i++
+        }
+
+        if(primo === true){
+            window.alert("É primo")
+        }else{
+            window.alert("Não é primo")
+        }
+
+    }else{
+        window.alert("Esse número não é primo")
+    }
+</script>
+</html>

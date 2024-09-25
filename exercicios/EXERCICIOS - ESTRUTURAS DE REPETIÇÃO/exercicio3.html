@@ -12,9 +12,18 @@
 </body>
 <script>
     let n = 1
+    let i = 1
 
-    while(n < 50){
-        document.write(n / 2)
+    while(i <= 50){
+
+        let result = n % 2
+
+        if(result == 0){
+            document.write(`${n},`)
+        }
+
+        n++
+        i++
     }
 </script>
 </html>

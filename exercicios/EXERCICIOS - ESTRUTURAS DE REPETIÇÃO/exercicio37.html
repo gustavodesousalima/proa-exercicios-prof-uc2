@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 37</title>
+</head>
+<body>
+    <h1>Faça um programa que leia um número inteiro e exiba se ele é um número primo.</h1>
+
+<script>
+    let numero = parseInt(prompt("Digite um número"))
+
+    let primo = true
+
+    for(let i = 2; i < numero; i++){
+
+        if(numero % i == 0){
+            primo = false
+            break
+        }
+    }
+
+    document.write(primo ? "É primo" : "Não é primo")
+</script>
+</body>
+</html>

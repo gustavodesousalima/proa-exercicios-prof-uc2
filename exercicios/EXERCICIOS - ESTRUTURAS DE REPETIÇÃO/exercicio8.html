@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h1>(8) Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "while".</h1>
+</body>
+<script>
+    let entrada = parseInt(prompt("Diigte um número"))
+    let a = 0
+    let b = 1
+
+    if(entrada >= 0){
+        while(a <= entrada){
+            document.write(`${a},`)
+
+            let proximo = a + b
+
+            a = b
+            b = proximo
+        }
+    }else{
+        window.alert("Número inválido")
+    }
+
+</script>
+</html>

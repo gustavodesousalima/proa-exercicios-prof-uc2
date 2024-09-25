@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    
+<script>
+    let entrada = parseInt(prompt("Digite um número"))
+    let i = 2
+    let primo = true
+
+do {
+    if(entrada % i == 0){
+        primo = false
+    }
+    i++
+}while(i < entrada)
+
+document.write(primo ? "É primo" : "Não é primo")
+</script>
+</body>
+</html>
